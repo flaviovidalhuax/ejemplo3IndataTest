@@ -32,19 +32,19 @@ public class UsuarioController {
          return ResponseEntity.status(HttpStatus.CREATED).contentType(MediaType.APPLICATION_JSON).body(userDTO);
     }
 
+
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/{id}")
     public Optional<UsuarioEntity> getById(@PathVariable Long id){
-         Optional<UsuarioEntity> user= userService.findById(id);
+        Optional<UsuarioEntity> user= userService.findById(id);
         return user;
     }
-
     @PostMapping("/save")
     public ResponseEntity<UsuarioEntity> postUser(@RequestBody UsuarioEntity user){
         userService.saveUserN(user);
      return ResponseEntity.status(HttpStatus.CREATED).contentType(MediaType.APPLICATION_JSON).body(user);
     }
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("elim/{id}")
     public void deleteUser(@PathVariable Long id){
         userService.deleted(id);
