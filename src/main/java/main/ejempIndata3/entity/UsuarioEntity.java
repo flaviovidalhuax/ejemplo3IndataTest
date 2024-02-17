@@ -1,9 +1,6 @@
 package main.ejempIndata3.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,12 +14,11 @@ import org.springframework.stereotype.Component;
 
 @Builder
 @Component
+@Table(name = "Usuario")
 public class UsuarioEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
     private String lastname;
     private String password;
