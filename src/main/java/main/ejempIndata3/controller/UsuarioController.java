@@ -20,10 +20,8 @@ public class UsuarioController {
 
     @GetMapping
     public ResponseEntity<List<UsuarioEntity>> getAllUser(){
-
         List<UsuarioEntity> data= userService.findAllUser();
         return ResponseEntity.status(HttpStatus.OK).contentType(MediaType.APPLICATION_JSON).body(data);
-
     }
 
     @PostMapping("/saveDTO")
@@ -45,7 +43,7 @@ public class UsuarioController {
      return ResponseEntity.status(HttpStatus.CREATED).contentType(MediaType.APPLICATION_JSON).body(user);
     }
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @DeleteMapping("elim/{id}")
+    @DeleteMapping("/elim/{id}")
     public void deleteUser(@PathVariable Long id){
         userService.deleted(id);
     }
