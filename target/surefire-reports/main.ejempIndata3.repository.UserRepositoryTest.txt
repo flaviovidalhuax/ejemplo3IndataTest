@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: main.ejempIndata3.repository.UserRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.02 s -- in main.ejempIndata3.repository.UserRepositoryTest
